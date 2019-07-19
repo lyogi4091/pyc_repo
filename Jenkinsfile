@@ -6,7 +6,7 @@ node {
             sh 'ls -l'
             sh 'python -m compileall python.py'
             sh 'ls -l'
-            sh 'python python*.py'
+            sh 'python python*.pyc'
             }
     }
 }
