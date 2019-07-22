@@ -10,13 +10,14 @@ node {
             }
     }
     stage('Pushing the .pyc file'){
-        dir ('/var/lib/jenkins/workspace/5. Job_.pyc')
-        try {
-            sh 'git add python*.pyc'
-            sh 'git commit -m "commit of .pyc file from jenkins"'
-            sh 'git push origin master'
-        } catch(error){
-            println "No pyc file to push";
+        dir ('/var/lib/jenkins/workspace/5. Job_.pyc'){
+            try {
+                sh 'git add python*.pyc'
+                sh 'git commit -m "commit of .pyc file from jenkins"'
+                sh 'git push origin master'
+            } catch(error){
+                println "No pyc file to push";
+            }
         }
     }
 }
