@@ -5,7 +5,7 @@ node {
         pyc_image.inside {
             sh 'ls -l'
             sh 'python -m compileall python.py'
-            sh 'ls -l __pycache__'
+            sh 'ls -l '
             sh 'python python*.pyc'
             }
     }
