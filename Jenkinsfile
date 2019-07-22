@@ -10,7 +10,7 @@ node {
             }
     }
     stage('Pushing the .pyc file'){
-        dir (/var/lib/jenkins/workspace/5. Job_.pyc)
+        dir ('/var/lib/jenkins/workspace/5. Job_.pyc')
         try {
             sh 'git add python*.pyc'
             sh 'git commit -m "commit of .pyc file from jenkins"'
