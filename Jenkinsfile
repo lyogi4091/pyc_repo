@@ -12,9 +12,9 @@ node {
     stage('Pushing the .pyc file'){
         dir ('/var/lib/jenkins/workspace/5. Job_.pyc'){
             try {
-                sh 'sudo git add python*.pyc'
-                sh 'sudo git commit -m "commit of .pyc file from jenkins"'
-                sh 'sudo git push origin master'
+                sh 'git add python*.pyc'
+                sh 'git commit -m "commit of .pyc file from jenkins"'
+                sh 'git push origin master'
             } catch(error){
                 println "No pyc file to push";
             }
