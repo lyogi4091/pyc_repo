@@ -14,7 +14,7 @@ node {
             try {
                 sh 'sudo git add python*.pyc'
                 sh 'sudo git commit -m "commit of .pyc file from jenkins"'
-                sh 'sudo git push origin master'
+                sh 'sudo git push origin HEAD:master'
             } catch(error){
                 println "No pyc file to push";
             }
